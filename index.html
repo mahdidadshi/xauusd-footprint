@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>XAUUSD Footprint</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#090d14;color:#e9eef7;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:14px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.title{font-size:20px;font-weight:800}.status{font-size:12px;color:#8fa0b8}
+.card{background:#111824;border:1px solid #202b3c;border-radius:18px;padding:15px;margin-bottom:12px;box-shadow:0 8px 28px #0004}
+.price{font-size:38px;font-weight:900;letter-spacing:-1px}.muted{color:#8fa0b8;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{background:#0b111b;border-radius:14px;padding:12px}.val{font-size:20px;font-weight:800;margin-top:3px}
+.signal{border-radius:18px;padding:18px;text-align:center;font-size:30px;font-weight:950;margin-bottom:12px}.wait{background:#202938}.buy{background:#103d2d;color:#65f2b0}.sell{background:#451d25;color:#ff8795}
+.level{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:8px 0;border-bottom:1px solid #202b3c;font-size:13px}.bar{height:7px;border-radius:10px;background:#1c2635;overflow:hidden}.bar i{display:block;height:100%;background:#5ee6a8}.bar.sell i{background:#ff7180}
+.small{font-size:11px;color:#718096}.pill{padding:5px 9px;border-radius:999px;background:#182334}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="title">XAUUSD Footprint</div><div id="status" class="status">در حال اتصال...</div></div>
+  <div id="signal" class="signal wait">WAIT</div>
+  <div class="card">
+    <div class="muted">CapitalXtend • MT5 • XAUUSD</div>
+    <div id="price" class="price">—</div>
+    <div class="muted" id="spread">Spread: —</div>
+  </div>
+  <div class="grid">
+    <div class="metric"><div class="muted">Delta</div><div id="delta" class="val">—</div></div>
+    <div class="metric"><div class="muted">POC</div><div id="poc" class="val">—</div></div>
+    <div class="metric"><div class="muted">Buy Vol</div><div id="buy" class="val">—</div></div>
+    <div class="metric"><div class="muted">Sell Vol</div><div id="sell" class="val">—</div></div>
+  </div>
+  <div class="card">
+    <div class="grid">
+      <div class="metric"><div class="muted">Entry</div><div id="entry" class="val">—</div></div>
+      <div class="metric"><div class="muted">SL</div><div id="sl" class="val">—</div></div>
+      <div class="metric"><div class="muted">TP</div><div id="tp" class="val">—</div></div>
+      <div class="metric"><div class="muted">Candle</div><div id="candle" class="val">—</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;margin-bottom:8px"><b>Footprint levels</b><span class="pill" id="levelsCount">0</span></div>
+    <div id="levels"></div>
+  </div>
+  <div class="small">تحلیل‌محور است؛ سفارش خودکار ارسال نمی‌شود.</div>
+</div>
+<script src="/app.js"></script>
+</body></html>
